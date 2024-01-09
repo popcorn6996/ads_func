@@ -1,11 +1,15 @@
+import 'package:ads_func/core/constants/time_ago.dart';
 import 'package:ads_func/router.dart';
 import 'package:ads_func/theme/spectrum.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:routemaster/routemaster.dart';
 import 'package:url_strategy/url_strategy.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 void main() {
+  timeago.setLocaleMessages('en', MyCustomMessages());
+
   runApp(const ProviderScope(child: MyApp()));
   setPathUrlStrategy();
 }

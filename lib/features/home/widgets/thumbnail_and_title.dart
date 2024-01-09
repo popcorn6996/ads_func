@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:routemaster/routemaster.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 import '../../../models/channel_video.dart';
+import '../../../theme/spectrum.dart';
 
 class ThumbnailAndTitle extends StatelessWidget {
   final ChannelVideo channelVideo;
@@ -46,7 +47,6 @@ class ThumbnailAndTitle extends StatelessWidget {
             children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                //   mainAxisSize: MainAxisSize.min,
                 children: [
                   CircleAvatar(
                     radius: 20,
@@ -69,13 +69,45 @@ class ThumbnailAndTitle extends StatelessWidget {
                           channelVideo.channelName,
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(color: Spectrum.greyColor),
                         ),
                         const SizedBox(height: 5),
-                        Text(
-                          '${channelVideo.views} views . ${DateFormat.EEEE().format(channelVideo.createdAt)} ',
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        )
+                        SizedBox(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                '${channelVideo.views} views',
+                                style:
+                                    const TextStyle(color: Spectrum.greyColor),
+                              ),
+                              const SizedBox(width: 10),
+                              Container(
+                                width: 5,
+                                height: 5,
+                                decoration: const BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              Text(
+                                timeago.format(
+                                  channelVideo.createdAt,
+                                  allowFromNow: true,
+                                  locale: 'en',
+                                ),
+                                style:
+                                    const TextStyle(color: Spectrum.greyColor),
+                              ),
+                            ],
+                          ),
+                        ),
+                        // Text(
+                        //   '${channelVideo.views} views . ${DateFormat.EEEE().format(channelVideo.createdAt)} ',
+                        //   maxLines: 2,
+                        //   overflow: TextOverflow.ellipsis,
+                        // )
                       ],
                     ),
                   )
