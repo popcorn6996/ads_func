@@ -46,9 +46,7 @@ class _DesktopHomeScreenState extends ConsumerState<DesktopHomeScreen> {
                       mainAxisExtent: 900,
                       mainAxisSpacing: 100),
                   itemBuilder: (ctx, i) {
-                    return Container(
-                        child:
-                            ThumbnailAndTitle(channelVideo: channelVideos[i]));
+                    return ThumbnailAndTitle(channelVideo: channelVideos[i]);
                   }),
             ),
           ]),

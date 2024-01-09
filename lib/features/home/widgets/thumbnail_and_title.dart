@@ -103,11 +103,6 @@ class ThumbnailAndTitle extends StatelessWidget {
                             ],
                           ),
                         ),
-                        // Text(
-                        //   '${channelVideo.views} views . ${DateFormat.EEEE().format(channelVideo.createdAt)} ',
-                        //   maxLines: 2,
-                        //   overflow: TextOverflow.ellipsis,
-                        // )
                       ],
                     ),
                   )

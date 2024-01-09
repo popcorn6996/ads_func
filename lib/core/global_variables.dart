@@ -2,11 +2,64 @@ import '../models/channel_video.dart';
 
 List<ChannelVideo> channelVideos = [
   ChannelVideo(
+    thumbnailUrl: 'assets/images/thumbnail.jpg',
+    profileUrl: 'assets/images/user1.jpg',
+    title: 'How to Add Ads Functionality to your applications',
+    channelName: 'Creed Codes',
+    views: 200,
+    videoDuration: const Duration(minutes: 20),
+    createdAt: DateTime.now(),
+  ),
+  ChannelVideo(
+    thumbnailUrl: 'assets/images/thumbnail.jpg',
+    profileUrl: 'assets/images/user1.jpg',
+    title: 'How to Add Ads Functionality to your applications',
+    channelName: 'Creed Codes',
+    views: 800,
+    videoDuration: const Duration(minutes: 20),
+    createdAt: DateTime.now().subtract(
+      const Duration(days: 30),
+    ),
+  ),
+  ChannelVideo(
+    thumbnailUrl: 'assets/images/thumbnail.jpg',
+    profileUrl: 'assets/images/user1.jpg',
+    title: 'How to Add Ads Functionality to your applications',
+    channelName: 'Creed Codes',
+    views: 632,
+    videoDuration: const Duration(minutes: 20),
+    createdAt: DateTime.now().subtract(
+      const Duration(hours: 30),
+    ),
+  ),
+  ChannelVideo(
+    thumbnailUrl: 'assets/images/thumbnail.jpg',
+    profileUrl: 'assets/images/user1.jpg',
+    title: 'How to Add Ads Functionality to your applications',
+    channelName: 'Creed Codes',
+    views: 90,
+    videoDuration: const Duration(minutes: 20),
+    createdAt: DateTime.now().subtract(
+      const Duration(days: 365),
+    ),
+  ),
+  ChannelVideo(
+    thumbnailUrl: 'assets/images/thumbnail.jpg',
+    profileUrl: 'assets/images/user1.jpg',
+    title: 'How to Add Ads Functionality to your applications',
+    channelName: 'Creed Codes',
+    views: 54,
+    videoDuration: const Duration(minutes: 20),
+    createdAt: DateTime.now().subtract(
+      const Duration(seconds: 300000),
+    ),
+  ),
+  ChannelVideo(
       thumbnailUrl: 'assets/images/thumbnail.jpg',
       profileUrl: 'assets/images/user1.jpg',
       title: 'How to Add Ads Functionality to your applications',
       channelName: 'Creed Codes',
-      views: 21,
+      views: 123,
       videoDuration: const Duration(minutes: 20),
       createdAt: DateTime.now()),
   ChannelVideo(
@@ -14,7 +67,7 @@ List<ChannelVideo> channelVideos = [
       profileUrl: 'assets/images/user1.jpg',
       title: 'How to Add Ads Functionality to your applications',
       channelName: 'Creed Codes',
-      views: 21,
+      views: 69,
       videoDuration: const Duration(minutes: 20),
       createdAt: DateTime.now()),
   ChannelVideo(
@@ -22,7 +75,7 @@ List<ChannelVideo> channelVideos = [
       profileUrl: 'assets/images/user1.jpg',
       title: 'How to Add Ads Functionality to your applications',
       channelName: 'Creed Codes',
-      views: 21,
+      views: 123,
       videoDuration: const Duration(minutes: 20),
       createdAt: DateTime.now()),
   ChannelVideo(
@@ -30,7 +83,7 @@ List<ChannelVideo> channelVideos = [
       profileUrl: 'assets/images/user1.jpg',
       title: 'How to Add Ads Functionality to your applications',
       channelName: 'Creed Codes',
-      views: 21,
+      views: 321,
       videoDuration: const Duration(minutes: 20),
       createdAt: DateTime.now()),
   ChannelVideo(
@@ -38,7 +91,7 @@ List<ChannelVideo> channelVideos = [
       profileUrl: 'assets/images/user1.jpg',
       title: 'How to Add Ads Functionality to your applications',
       channelName: 'Creed Codes',
-      views: 21,
+      views: 481,
       videoDuration: const Duration(minutes: 20),
       createdAt: DateTime.now()),
   ChannelVideo(
@@ -46,7 +99,7 @@ List<ChannelVideo> channelVideos = [
       profileUrl: 'assets/images/user1.jpg',
       title: 'How to Add Ads Functionality to your applications',
       channelName: 'Creed Codes',
-      views: 21,
+      views: 920,
       videoDuration: const Duration(minutes: 20),
       createdAt: DateTime.now()),
   ChannelVideo(
@@ -54,7 +107,7 @@ List<ChannelVideo> channelVideos = [
       profileUrl: 'assets/images/user1.jpg',
       title: 'How to Add Ads Functionality to your applications',
       channelName: 'Creed Codes',
-      views: 21,
+      views: 82,
       videoDuration: const Duration(minutes: 20),
       createdAt: DateTime.now()),
   ChannelVideo(
@@ -62,47 +115,7 @@ List<ChannelVideo> channelVideos = [
       profileUrl: 'assets/images/user1.jpg',
       title: 'How to Add Ads Functionality to your applications',
       channelName: 'Creed Codes',
-      views: 21,
-      videoDuration: const Duration(minutes: 20),
-      createdAt: DateTime.now()),
-  ChannelVideo(
-      thumbnailUrl: 'assets/images/thumbnail.jpg',
-      profileUrl: 'assets/images/user1.jpg',
-      title: 'How to Add Ads Functionality to your applications',
-      channelName: 'Creed Codes',
-      views: 21,
-      videoDuration: const Duration(minutes: 20),
-      createdAt: DateTime.now()),
-  ChannelVideo(
-      thumbnailUrl: 'assets/images/thumbnail.jpg',
-      profileUrl: 'assets/images/user1.jpg',
-      title: 'How to Add Ads Functionality to your applications',
-      channelName: 'Creed Codes',
-      views: 21,
-      videoDuration: const Duration(minutes: 20),
-      createdAt: DateTime.now()),
-  ChannelVideo(
-      thumbnailUrl: 'assets/images/thumbnail.jpg',
-      profileUrl: 'assets/images/user1.jpg',
-      title: 'How to Add Ads Functionality to your applications',
-      channelName: 'Creed Codes',
-      views: 21,
-      videoDuration: const Duration(minutes: 20),
-      createdAt: DateTime.now()),
-  ChannelVideo(
-      thumbnailUrl: 'assets/images/thumbnail.jpg',
-      profileUrl: 'assets/images/user1.jpg',
-      title: 'How to Add Ads Functionality to your applications',
-      channelName: 'Creed Codes',
-      views: 21,
-      videoDuration: const Duration(minutes: 20),
-      createdAt: DateTime.now()),
-  ChannelVideo(
-      thumbnailUrl: 'assets/images/thumbnail.jpg',
-      profileUrl: 'assets/images/user1.jpg',
-      title: 'How to Add Ads Functionality to your applications',
-      channelName: 'Creed Codes',
-      views: 21,
+      views: 11,
       videoDuration: const Duration(minutes: 20),
       createdAt: DateTime.now()),
 ];

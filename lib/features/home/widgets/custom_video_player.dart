@@ -11,28 +11,39 @@ class CustomVideoPlayer extends StatefulWidget {
 }
 
 class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
-  VideoPlayerController? _adController;
-  VideoPlayerController? _regularVideoController;
+  final VideoPlayerController _adController =
+      VideoPlayerController.asset('assets/images/video.mp4')
+        ..initialize()
+        ..play();
+  final VideoPlayerController _regularVideoController =
+      VideoPlayerController.asset('assets/images/video.mp4')
+        ..initialize()
+        ..play();
   bool _isFullScreen = false;
-  Duration _position = Duration.zero;
-  Duration _duration = Duration.zero;
+  final Duration _position = Duration.zero;
+  final Duration _duration = Duration.zero;
+
+  @override
+  initState() {
+    super.initState();
+  }
 
   void _adsTogglePlayPause() {
     setState(() {
-      if (_adController!.value.isPlaying) {
-        _adController!.pause();
+      if (_adController.value.isPlaying) {
+        _adController.pause();
       } else {
-        _adController!.play();
+        _adController.play();
       }
     });
   }
 
   void _togglePlayPause() {
     setState(() {
-      if (_regularVideoController!.value.isPlaying) {
-        _regularVideoController!.pause();
+      if (_regularVideoController.value.isPlaying) {
+        _regularVideoController.pause();
       } else {
-        _regularVideoController!.play();
+        _regularVideoController.play();
       }
     });
   }
@@ -44,14 +55,9 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
   }
 
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   void dispose() {
-    _adController?.dispose();
-    _regularVideoController?.dispose();
+    _adController.dispose();
+    _regularVideoController.dispose();
     super.dispose();
   }
 
@@ -72,16 +78,15 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
           border: Border.all(color: Spectrum.greyColor),
           borderRadius: BorderRadius.circular(20),
         ),
-        child: _regularVideoController != null &&
-                _regularVideoController!.value.isInitialized
+        child: _regularVideoController.value.isInitialized
             ? Stack(
                 children: [
                   Center(
-                    child: _regularVideoController!.value.isInitialized
+                    child: _regularVideoController.value.isInitialized
                         ? AspectRatio(
                             aspectRatio:
-                                _regularVideoController!.value.aspectRatio,
-                            child: VideoPlayer(_regularVideoController!),
+                                _regularVideoController.value.aspectRatio,
+                            child: VideoPlayer(_regularVideoController),
                           )
                         : const CircularProgressIndicator(),
                   ),
@@ -98,7 +103,7 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
                           const SizedBox(width: 8),
                           IconButton(
                             icon: Icon(
-                              _regularVideoController!.value.isPlaying
+                              _regularVideoController.value.isPlaying
                                   ? Icons.pause
                                   : Icons.play_arrow,
                             ),
@@ -123,10 +128,10 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
               )
             : Stack(children: [
                 Center(
-                  child: _adController!.value.isInitialized
+                  child: _adController.value.isInitialized
                       ? AspectRatio(
-                          aspectRatio: _adController!.value.aspectRatio,
-                          child: VideoPlayer(_adController!),
+                          aspectRatio: _adController.value.aspectRatio,
+                          child: VideoPlayer(_adController),
                         )
                       : const CircularProgressIndicator(),
                 ),
@@ -143,7 +148,7 @@ class _CustomVideoPlayerState extends State<CustomVideoPlayer> {
                         const SizedBox(width: 8),
                         IconButton(
                           icon: Icon(
-                            _adController!.value.isPlaying
+                            _adController.value.isPlaying
                                 ? Icons.pause
                                 : Icons.play_arrow,
                           ),
