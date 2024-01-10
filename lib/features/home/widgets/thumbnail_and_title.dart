@@ -41,78 +41,66 @@ class ThumbnailAndTitle extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         SizedBox(
-          // height: 400,
-          // width: 500,
-          child: Column(
+          height: 75,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CircleAvatar(
-                    radius: 20,
-                    backgroundImage: AssetImage(channelVideo.profileUrl),
-                  ),
-                  const SizedBox(width: 10),
-                  SizedBox(
-                    height: 300,
-                    width: 230,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          channelVideo.title,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        const SizedBox(height: 5),
-                        Text(
-                          channelVideo.channelName,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          style: const TextStyle(color: Spectrum.greyColor),
-                        ),
-                        const SizedBox(height: 5),
-                        SizedBox(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                '${channelVideo.views} views',
-                                style:
-                                    const TextStyle(color: Spectrum.greyColor),
-                              ),
-                              const SizedBox(width: 10),
-                              Container(
-                                width: 5,
-                                height: 5,
-                                decoration: const BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  color: Colors.grey,
-                                ),
-                              ),
-                              const SizedBox(width: 10),
-                              Text(
-                                timeago.format(
-                                  channelVideo.createdAt,
-                                  allowFromNow: true,
-                                  locale: 'en',
-                                ),
-                                style:
-                                    const TextStyle(color: Spectrum.greyColor),
-                              ),
-                            ],
-                          ),
-                        ),
-                        // Text(
-                        //   '${channelVideo.views} views . ${DateFormat.EEEE().format(channelVideo.createdAt)} ',
-                        //   maxLines: 2,
-                        //   overflow: TextOverflow.ellipsis,
-                        // )
-                      ],
-                    ),
-                  )
-                ],
+              CircleAvatar(
+                radius: 20,
+                backgroundImage: AssetImage(channelVideo.profileUrl),
               ),
+              const SizedBox(width: 10),
+              SizedBox(
+                height: 300,
+                width: 230,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      channelVideo.title,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      channelVideo.channelName,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(color: Spectrum.greyColor),
+                    ),
+                    const SizedBox(height: 5),
+                    SizedBox(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Text(
+                            '${channelVideo.views} views',
+                            style: const TextStyle(color: Spectrum.greyColor),
+                          ),
+                          const SizedBox(width: 10),
+                          Container(
+                            width: 5,
+                            height: 5,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          Text(
+                            timeago.format(
+                              channelVideo.createdAt,
+                              allowFromNow: true,
+                              locale: 'en',
+                            ),
+                            style: const TextStyle(color: Spectrum.greyColor),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
           ),
         )

@@ -39,8 +39,6 @@ class _VideoDetailsState extends ConsumerState<VideoDetails> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  // height: 500,
-                  // width: size.width * 0.7,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

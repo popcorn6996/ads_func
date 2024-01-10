@@ -8,9 +8,9 @@ import 'package:url_strategy/url_strategy.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
 void main() {
-  timeago.setLocaleMessages('en', MyCustomMessages());
-
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const ProviderScope(child: MyApp()));
+  timeago.setLocaleMessages('en', MyCustomMessages());
   setPathUrlStrategy();
 }
 

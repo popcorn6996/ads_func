@@ -36,19 +36,17 @@ class _DesktopHomeScreenState extends ConsumerState<DesktopHomeScreen> {
             const Chips(),
             const SizedBox(height: 5),
             SizedBox(
-              height: size.height,
+              height: size.height + 800,
               child: GridView.builder(
                   itemCount: channelVideos.length,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4,
                       childAspectRatio: 3 / 2,
                       crossAxisSpacing: 15,
-                      mainAxisExtent: 900,
-                      mainAxisSpacing: 100),
+                      mainAxisExtent: 400,
+                      mainAxisSpacing: 1),
                   itemBuilder: (ctx, i) {
-                    return Container(
-                        child:
-                            ThumbnailAndTitle(channelVideo: channelVideos[i]));
+                    return ThumbnailAndTitle(channelVideo: channelVideos[i]);
                   }),
             ),
           ]),
