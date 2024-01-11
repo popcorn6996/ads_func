@@ -1,4 +1,14 @@
+import '../models/ads.dart';
 import '../models/channel_video.dart';
+
+List<Ads> ads = [
+  Ads(id: '1', videoUrl: 'assets/videos/creed.mp4', videolength: 31),
+  Ads(id: '2', videoUrl: 'assets/videos/blank.mp4', videolength: 5),
+  Ads(id: '3', videoUrl: 'assets/videos/penny.mp4', videolength: 5),
+  Ads(id: '4', videoUrl: 'assets/videos/earnings.mp4', videolength: 9),
+  Ads(id: '5', videoUrl: 'assets/videos/video.mp4', videolength: 6),
+  Ads(id: '6', videoUrl: 'assets/videos/money.mp4', videolength: 17),
+];
 
 List<ChannelVideo> channelVideos = [
   ChannelVideo(
